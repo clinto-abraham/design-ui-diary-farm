@@ -73,7 +73,7 @@ export default function Design7Page() {
               <span className="italic text-[#d4af37]">One Murrah Unit &rarr; 88 Head of Herd.</span>
             </h1>
             <p className="text-[#b3c4b9] text-base font-sans leading-relaxed">
-              Designed for discerning investors seeking inflation-shielded real tangible assets. A capital commitment of ₹2,00,000 initiates a certified generational breeding cycle yielding substantial liquid cashflow and multi-crore herd valuation over a ten-year horizon.
+              Designed for discerning animal asset owners seeking inflation-shielded real tangible assets. A capital commitment of ₹2,00,000 initiates a certified generational breeding cycle yielding substantial liquid cashflow and multi-crore herd valuation over a ten-year horizon.
             </p>
 
             <div className="pt-2 grid grid-cols-3 gap-4 font-sans border-t border-[#d4af37]/20 pt-6">

@@ -33,9 +33,9 @@ export interface BuffaloInvestmentConfig {
 export const DEFAULT_CONFIG: BuffaloInvestmentConfig = {
   packageCount: 1,
   initialPackagePriceINR: 200000,
-  milkPricePerLiterINR: 70,
-  litersPerDayPerAdult: 14,
-  lactationDaysPerYear: 300,
+  milkPricePerLiterINR: 80,
+  litersPerDayPerAdult: 12,
+  lactationDaysPerYear: 365,
   adultAssetValueINR: 150000,
   calfAssetValueINR: 50000,
   adultCareCostPerYearINR: 100000,
@@ -165,6 +165,11 @@ export function calculate10YearProjection(
   return projections;
 }
 
+export function formatNumber(amount: number): string {
+  // Pure deterministic string formatting (en-US comma grouping) to ensure 100% hydration match across all locales
+  return Math.round(amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 export function formatINR(amount: number): string {
   if (amount >= 10000000) {
     return `₹${(amount / 10000000).toFixed(2)} Cr`;
@@ -172,5 +177,5 @@ export function formatINR(amount: number): string {
   if (amount >= 100000) {
     return `₹${(amount / 100000).toFixed(2)} Lacs`;
   }
-  return `₹${amount.toLocaleString("en-IN")}`;
+  return `₹${formatNumber(amount)}`;
 }

@@ -73,9 +73,12 @@ export function DesignSwitcher({ currentDesignId }: { currentDesignId?: string }
   const [isOpen, setIsOpen] = useState(false);
   const [isNavigating, setIsNavigating] = useState(false);
 
+  const isHomePrefix = currentDesignId?.includes("home") || currentDesignId?.startsWith("page-");
+  const prefix = isHomePrefix ? "/home/page-" : "/design-";
+
   // Extract numeric index (1 to 50)
   const currentIndex = currentDesignId
-    ? parseInt(currentDesignId.replace("design-", ""), 10)
+    ? parseInt(currentDesignId.replace(/^(home\/page-|page-|design-)/, ""), 10)
     : 0;
 
   const hasPrevious = currentIndex > 1;
@@ -83,7 +86,7 @@ export function DesignSwitcher({ currentDesignId }: { currentDesignId?: string }
 
   const prevDesign = hasPrevious ? DESIGNS[currentIndex - 2] : null;
   const nextDesign = hasNext ? DESIGNS[currentIndex] : null;
-  const current = DESIGNS.find((d) => d.id === currentDesignId);
+  const current = DESIGNS.find((d) => d.id === `design-${currentIndex}`);
 
   // Navigate with instant skeleton feedback
   const handleNavigate = (path: string) => {
@@ -103,15 +106,15 @@ export function DesignSwitcher({ currentDesignId }: { currentDesignId?: string }
       }
 
       if (e.key === "ArrowLeft" && hasPrevious) {
-        handleNavigate(`/design-${currentIndex - 1}`);
+        handleNavigate(`${prefix}${currentIndex - 1}`);
       } else if (e.key === "ArrowRight" && hasNext) {
-        handleNavigate(`/design-${currentIndex + 1}`);
+        handleNavigate(`${prefix}${currentIndex + 1}`);
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [currentIndex, hasPrevious, hasNext]);
+  }, [currentIndex, hasPrevious, hasNext, prefix]);
 
   return (
     <>
@@ -142,7 +145,7 @@ export function DesignSwitcher({ currentDesignId }: { currentDesignId?: string }
       {hasPrevious && prevDesign && (
         <div className="fixed left-3 sm:left-6 top-1/2 -translate-y-1/2 z-50 group font-sans">
           <button
-            onClick={() => handleNavigate(`/${prevDesign.id}`)}
+            onClick={() => handleNavigate(`${prefix}${currentIndex - 1}`)}
             className="flex items-center gap-2 p-3 sm:px-4 sm:py-3.5 rounded-2xl border border-slate-700/80 bg-slate-900/90 text-white shadow-2xl backdrop-blur-xl hover:border-emerald-400 hover:bg-slate-800 hover:scale-105 active:scale-95 transition-all duration-200"
             aria-label={`Previous Design: ${prevDesign.name}`}
             title={`Previous Design: ${prevDesign.name} (Shortcut: Left Arrow ←)`}
@@ -161,11 +164,11 @@ export function DesignSwitcher({ currentDesignId }: { currentDesignId?: string }
       )}
 
       {/* RIGHT SIDE: NEXT DESIGN ARROW BUTTON */}
-      {/* Strict Condition: Only rendered if hasNext (currentIndex < 40). NOT rendered on last page! */}
+      {/* Strict Condition: Only rendered if hasNext (currentIndex < 50). NOT rendered on last page! */}
       {hasNext && nextDesign && (
         <div className="fixed right-3 sm:right-6 top-1/2 -translate-y-1/2 z-50 group font-sans">
           <button
-            onClick={() => handleNavigate(`/${nextDesign.id}`)}
+            onClick={() => handleNavigate(`${prefix}${currentIndex + 1}`)}
             className="flex items-center gap-2 p-3 sm:px-4 sm:py-3.5 rounded-2xl border border-slate-700/80 bg-slate-900/90 text-white shadow-2xl backdrop-blur-xl hover:border-emerald-400 hover:bg-slate-800 hover:scale-105 active:scale-95 transition-all duration-200"
             aria-label={`Next Design: ${nextDesign.name}`}
             title={`Next Design: ${nextDesign.name} (Shortcut: Right Arrow →)`}
@@ -194,23 +197,31 @@ export function DesignSwitcher({ currentDesignId }: { currentDesignId?: string }
                 </p>
                 <h4 className="text-sm font-bold text-white">Compare 50 UI Designs</h4>
               </div>
-              <Link
-                href="/"
-                className="inline-flex items-center gap-1.5 rounded-lg bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-300 hover:bg-slate-700 hover:text-white transition"
-              >
-                <LayoutGrid className="w-3.5 h-3.5" /> All Hub
-              </Link>
+              <div className="flex items-center gap-2">
+                <Link
+                  href="/input/page-1"
+                  className="inline-flex items-center gap-1 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2 py-1 text-xs font-medium hover:bg-amber-500/30 transition"
+                >
+                  📝 Input Forms
+                </Link>
+                <Link
+                  href="/"
+                  className="inline-flex items-center gap-1 rounded-lg bg-slate-800 px-2 py-1 text-xs font-medium text-slate-300 hover:bg-slate-700 hover:text-white transition"
+                >
+                  <LayoutGrid className="w-3.5 h-3.5" /> All Hub
+                </Link>
+              </div>
             </div>
 
             <div className="mt-3 max-h-96 overflow-y-auto space-y-1.5 pr-1 text-left">
               {DESIGNS.map((item, idx) => {
-                const active = item.id === currentDesignId;
+                const active = idx + 1 === currentIndex;
                 return (
                   <button
                     key={item.id}
                     onClick={() => {
                       setIsOpen(false);
-                      handleNavigate(`/${item.id}`);
+                      handleNavigate(`${prefix}${idx + 1}`);
                     }}
                     className={`w-full flex items-center justify-between rounded-xl px-3 py-2 text-xs transition border text-left ${
                       active

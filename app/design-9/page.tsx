@@ -64,7 +64,7 @@ export default function Design9Page() {
           <span className="text-orange-400">Her 88 Descendants.</span>
         </h1>
         <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-          In Year 0, an investor commits ₹2,00,000 to adopt Gauri (a pure Murrah buffalo) and her newborn daughter Kaveri. What follows is not luck—it is the biological arithmetic of life, milk, and family compounding.
+          In Year 0, an animal asset owner commits ₹2,00,000 to adopt Gauri (a pure Murrah buffalo) and her newborn daughter Kaveri. What follows is not luck—it is the biological arithmetic of life, milk, and family compounding.
         </p>
 
         <div className="pt-4 flex flex-wrap justify-center gap-4 text-xs font-mono">

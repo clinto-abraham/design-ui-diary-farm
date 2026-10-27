@@ -23,7 +23,7 @@ export default function Design14Page() {
     <div className="min-h-screen bg-[#071326] text-slate-100 font-sans antialiased selection:bg-[#c5a059] selection:text-black">
       {/* Confidential Memorandum Bar */}
       <div className="border-b border-slate-800 bg-[#040c19] py-2 px-6 flex items-center justify-between text-[11px] text-slate-400 font-mono">
-        <span>CONFIDENTIAL INFORMATION MEMORANDUM &bull; FOR ACCREDITED INVESTORS ONLY</span>
+        <span>CONFIDENTIAL INFORMATION MEMORANDUM &bull; FOR ACCREDITED ANIMAL ASSET OWNERS ONLY</span>
         <span className="text-[#c5a059] hidden sm:inline-block">OFFERING CODE: HIRA-PE-14</span>
       </div>
 
