@@ -1340,15 +1340,15 @@ export default function Home() {
                 <ShoppingBag className="w-6 h-6" />
               </div>
               <span className="text-xs font-mono font-black px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-900 border border-sky-300">
-                Marketplace UI
+                16 Modules
               </span>
             </div>
 
             <h3 className="text-lg font-black text-stone-950 group-hover:text-sky-700 transition">
-              Marketplace Web App
+              Marketplace Web App &amp; Family Trees
             </h3>
             <p className="text-xs text-stone-600 mt-1.5 leading-relaxed">
-              Vibrant orders &amp; live GPS transit telemetry, veterinary fitness dossiers, and retail storefront.
+              Live orders, onboarding wizards, and 5 distinct 10-year bovine family pedigree tree designs starting with 2 animals.
             </p>
 
             <div className="mt-5 pt-3 border-t border-stone-100 flex items-center justify-between text-xs font-bold text-sky-700">
@@ -1508,7 +1508,7 @@ export default function Home() {
               }`}
             >
               <ShoppingBag className="w-4 h-4" />
-              Marketplace Web App (4)
+              Marketplace &amp; Family Trees (16)
             </button>
             <button
               onClick={() => setActiveCategory("admin")}
@@ -1929,8 +1929,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 4 Marketplace Module Cards */}
-            <div className="grid md:grid-cols-2 gap-5">
+            {/* 11 Marketplace Module Cards */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {/* Module 1 */}
               <Link
                 href="/marketplace/page-1"
                 className="group p-6 rounded-3xl bg-white border-2 border-sky-200/80 shadow-md hover:shadow-xl transition-all space-y-3"
@@ -1940,7 +1941,7 @@ export default function Home() {
                     MARKETPLACE-PAGE-01
                   </span>
                   <span className="text-xs font-mono font-bold text-emerald-600 flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping inline-block" /> Live Radar Active
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping inline-block" /> Live Radar
                   </span>
                 </div>
                 <h4 className="font-extrabold text-base text-slate-900 group-hover:text-sky-600 transition-colors">
@@ -1954,59 +1955,335 @@ export default function Home() {
                 </div>
               </Link>
 
-              <div className="p-6 rounded-3xl bg-white border-2 border-emerald-200/80 shadow-md space-y-3">
+              {/* Module 2: Design 1 */}
+              <Link
+                href="/marketplace/page-2"
+                className="group p-6 rounded-3xl bg-white border-2 border-emerald-200/80 shadow-md hover:shadow-xl transition-all space-y-3"
+              >
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300">
                     MARKETPLACE-PAGE-02
                   </span>
-                  <span className="text-xs font-mono font-bold text-slate-500">Catalog Feed</span>
+                  <span className="text-xs font-mono font-bold text-emerald-700">Studio Stepper</span>
                 </div>
-                <h4 className="font-extrabold text-base text-slate-900">
-                  02. Murrah High-Yield Marketplace Catalog
+                <h4 className="font-extrabold text-base text-slate-900 group-hover:text-emerald-600 transition-colors">
+                  02. Studio Stepper &amp; 360° Photo Showcase
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                  Comprehensive listing of certified lactating Murrah buffaloes, sire genomic profiles, milk yield fat curves, and instant ₹2 Lacs bookings.
+                  Multi-angle photo gallery slots, udder conformation scoring, and transparent itemized rate fixing.
                 </p>
-                <div className="pt-2 text-xs font-bold text-emerald-700 flex items-center gap-1">
-                  <span>Unit Showcases &amp; Pedigree Sires</span> &rarr;
+                <div className="pt-2 text-xs font-bold text-emerald-700 flex items-center gap-1 group-hover:translate-x-1.5 transition-transform">
+                  <span>Launch Studio Stepper</span> &rarr;
                 </div>
-              </div>
+              </Link>
 
-              <div className="p-6 rounded-3xl bg-white border-2 border-amber-200/80 shadow-md space-y-3">
+              {/* Module 3: Design 2 */}
+              <Link
+                href="/marketplace/page-3"
+                className="group p-6 rounded-3xl bg-white border-2 border-indigo-200/80 shadow-md hover:shadow-xl transition-all space-y-3"
+              >
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-900 border border-indigo-300">
                     MARKETPLACE-PAGE-03
                   </span>
-                  <span className="text-xs font-mono font-bold text-slate-500">Escrow Desk</span>
+                  <span className="text-xs font-mono font-bold text-indigo-700">Genomic Lineage</span>
                 </div>
-                <h4 className="font-extrabold text-base text-slate-900">
-                  03. Escrow Checkout &amp; Direct Mandi Booking
+                <h4 className="font-extrabold text-base text-slate-900 group-hover:text-indigo-600 transition-colors">
+                  03. Bovine Biometric &amp; Pedigree Dossier
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                  Integer paise precision checkout, RTGS/NEFT UTR reconciliation workflow, 20-minute inventory reservation locks, and PhonePe integration.
+                  Sire frozen semen straw record, dam lactation benchmarks, A2A2 genotyping, and 15-digit RFID chip generator.
                 </p>
-                <div className="pt-2 text-xs font-bold text-amber-700 flex items-center gap-1">
-                  <span>Statutory Settlement Escrow</span> &rarr;
+                <div className="pt-2 text-xs font-bold text-indigo-700 flex items-center gap-1 group-hover:translate-x-1.5 transition-transform">
+                  <span>View Pedigree Dossier</span> &rarr;
                 </div>
-              </div>
+              </Link>
 
-              <div className="p-6 rounded-3xl bg-white border-2 border-purple-200/80 shadow-md space-y-3">
+              {/* Module 4: Design 3 */}
+              <Link
+                href="/marketplace/page-4"
+                className="group p-6 rounded-3xl bg-white border-2 border-amber-200/80 shadow-md hover:shadow-xl transition-all space-y-3"
+              >
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-900 border border-purple-300">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300">
                     MARKETPLACE-PAGE-04
                   </span>
-                  <span className="text-xs font-mono font-bold text-slate-500">Dividends</span>
+                  <span className="text-xs font-mono font-bold text-amber-700">Herd Lots</span>
                 </div>
-                <h4 className="font-extrabold text-base text-slate-900">
-                  04. Investor Herd Compounding Portfolio
+                <h4 className="font-extrabold text-base text-slate-900 group-hover:text-amber-600 transition-colors">
+                  04. Multi-Unit Herd Lot &amp; Batch Builder
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                  Real-time investor dashboard tracking 30% monthly profit disbursements, multi-generational female calf offspring, and live milk production logs.
+                  Commercial lot builder for 2-10 pairs, cumulative weighbridge aggregator, and specialized vehicle fleet capacity.
                 </p>
-                <div className="pt-2 text-xs font-bold text-purple-700 flex items-center gap-1">
-                  <span>10-Year Compounding Wealth</span> &rarr;
+                <div className="pt-2 text-xs font-bold text-amber-700 flex items-center gap-1 group-hover:translate-x-1.5 transition-transform">
+                  <span>Build Herd Lot</span> &rarr;
                 </div>
-              </div>
+              </Link>
+
+              {/* Module 5: Design 4 */}
+              <Link
+                href="/marketplace/page-5"
+                className="group p-6 rounded-3xl bg-white border-2 border-rose-200/80 shadow-md hover:shadow-xl transition-all space-y-3"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-900 border border-rose-300">
+                    MARKETPLACE-PAGE-05
+                  </span>
+                  <span className="text-xs font-mono font-bold text-rose-700">Anatomy Scorer</span>
+                </div>
+                <h4 className="font-extrabold text-base text-slate-900 group-hover:text-rose-600 transition-colors">
+                  05. Anatomy Mapper &amp; Conformation Scorer
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Visual body condition score (BCS), udder symmetry and horn curvature sliders with conformation-indexed price tiers.
+                </p>
+                <div className="pt-2 text-xs font-bold text-rose-700 flex items-center gap-1 group-hover:translate-x-1.5 transition-transform">
+                  <span>Score Conformation</span> &rarr;
+                </div>
+              </Link>
+
+              {/* Module 6: Design 5 */}
+              <Link
+                href="/marketplace/page-6"
+                className="group p-6 rounded-3xl bg-white border-2 border-teal-200/80 shadow-md hover:shadow-xl transition-all space-y-3"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-teal-100 text-teal-900 border border-teal-300">
+                    MARKETPLACE-PAGE-06
+                  </span>
+                  <span className="text-xs font-mono font-bold text-teal-700">Fintech Escrow</span>
+                </div>
+                <h4 className="font-extrabold text-base text-slate-900 group-hover:text-teal-600 transition-colors">
+                  06. Fintech Escrow Package Configurator
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Standard ₹2,00,000 itemized ledger, 1-year mortality insurance buffer, and 30% monthly dividend ROI simulator.
+                </p>
+                <div className="pt-2 text-xs font-bold text-teal-700 flex items-center gap-1 group-hover:translate-x-1.5 transition-transform">
+                  <span>Configure Escrow Pack</span> &rarr;
+                </div>
+              </Link>
+
+              {/* Module 7: Design 6 */}
+              <Link
+                href="/marketplace/page-7"
+                className="group p-6 rounded-3xl bg-white border-2 border-yellow-200/80 shadow-md hover:shadow-xl transition-all space-y-3"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-yellow-100 text-yellow-900 border border-yellow-300">
+                    MARKETPLACE-PAGE-07
+                  </span>
+                  <span className="text-xs font-mono font-bold text-yellow-700">Mandi Slip</span>
+                </div>
+                <h4 className="font-extrabold text-base text-slate-900 group-hover:text-yellow-600 transition-colors">
+                  07. Auction &amp; Mandi Fast-Entry Slip
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Bluetooth digital scale sync, spot camera photo snap, rapid ear-tagging, and fast bid rate locking.
+                </p>
+                <div className="pt-2 text-xs font-bold text-yellow-700 flex items-center gap-1 group-hover:translate-x-1.5 transition-transform">
+                  <span>Open Fast Intake Slip</span> &rarr;
+                </div>
+              </Link>
+
+              {/* Module 8: Design 7 */}
+              <Link
+                href="/marketplace/page-8"
+                className="group p-6 rounded-3xl bg-white border-2 border-green-200/80 shadow-md hover:shadow-xl transition-all space-y-3"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-green-100 text-green-900 border border-green-300">
+                    MARKETPLACE-PAGE-08
+                  </span>
+                  <span className="text-xs font-mono font-bold text-green-700">Organic &amp; A2</span>
+                </div>
+                <h4 className="font-extrabold text-base text-slate-900 group-hover:text-green-600 transition-colors">
+                  08. Organic Pasture &amp; A2 Purity Certified
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Pasture nutrition metrics, A2 Beta-Casein DNA certificates, zero-antibiotic withdrawal, and ₹90/L D2C pricing.
+                </p>
+                <div className="pt-2 text-xs font-bold text-green-700 flex items-center gap-1 group-hover:translate-x-1.5 transition-transform">
+                  <span>Explore Organic Pack</span> &rarr;
+                </div>
+              </Link>
+
+              {/* Module 9: Design 8 */}
+              <Link
+                href="/marketplace/page-9"
+                className="group p-6 rounded-3xl bg-white border-2 border-sky-200/80 shadow-md hover:shadow-xl transition-all space-y-3"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-900 border border-sky-300">
+                    MARKETPLACE-PAGE-09
+                  </span>
+                  <span className="text-xs font-mono font-bold text-sky-700">Clinical Gate</span>
+                </div>
+                <h4 className="font-extrabold text-base text-slate-900 group-hover:text-sky-600 transition-colors">
+                  09. Veterinary Health Gate &amp; Quarantine
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Brucellosis / TB serology panels, mandatory quarantine holding bay checks, and official veterinary fitness sign-off.
+                </p>
+                <div className="pt-2 text-xs font-bold text-sky-700 flex items-center gap-1 group-hover:translate-x-1.5 transition-transform">
+                  <span>Sign Clinical Gate Pass</span> &rarr;
+                </div>
+              </Link>
+
+              {/* Module 10: Design 9 */}
+              <Link
+                href="/marketplace/page-10"
+                className="group p-6 rounded-3xl bg-white border-2 border-violet-200/80 shadow-md hover:shadow-xl transition-all space-y-3"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-violet-100 text-violet-900 border border-violet-300">
+                    MARKETPLACE-PAGE-10
+                  </span>
+                  <span className="text-xs font-mono font-bold text-violet-700">Live WYSIWYG</span>
+                </div>
+                <h4 className="font-extrabold text-base text-slate-900 group-hover:text-violet-600 transition-colors">
+                  10. Split-Screen WYSIWYG Marketplace Studio
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Dual-pane operator studio with real-time customer storefront card preview updating as you type specifications.
+                </p>
+                <div className="pt-2 text-xs font-bold text-violet-700 flex items-center gap-1 group-hover:translate-x-1.5 transition-transform">
+                  <span>Open Split Studio</span> &rarr;
+                </div>
+              </Link>
+
+              {/* Module 11: Design 10 */}
+              <Link
+                href="/marketplace/page-11"
+                className="group p-6 rounded-3xl bg-white border-2 border-rose-200/80 shadow-md hover:shadow-xl transition-all space-y-3"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-900 border border-rose-300">
+                    MARKETPLACE-PAGE-11
+                  </span>
+                  <span className="text-xs font-mono font-bold text-rose-700">10-Yr Compounding</span>
+                </div>
+                <h4 className="font-extrabold text-base text-slate-900 group-hover:text-rose-600 transition-colors">
+                  11. 10-Year Genetic Compounding Multiplier
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Starter pack of 1 mother + female calf with sex-sorted AI expanding into 41 adult animals and calves over 10 years.
+                </p>
+                <div className="pt-2 text-xs font-bold text-rose-700 flex items-center gap-1 group-hover:translate-x-1.5 transition-transform">
+                  <span>Launch Compounding Tree</span> &rarr;
+                </div>
+              </Link>
+
+              {/* Module 12: Family Tree Design 1 */}
+              <Link
+                href="/marketplace/page-12"
+                className="group p-6 rounded-3xl bg-white border-2 border-emerald-300 shadow-md hover:shadow-xl transition-all space-y-3 ring-2 ring-emerald-500/10"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300">
+                    MARKETPLACE-PAGE-12
+                  </span>
+                  <span className="text-xs font-mono font-bold text-emerald-700">Tree Design #1</span>
+                </div>
+                <h4 className="font-extrabold text-base text-slate-900 group-hover:text-emerald-600 transition-colors">
+                  12. Genealogical Pedigree Family Tree
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Exact screenshot style pedigree: Dam + Sire AI connected with (=) connector, vertical drop junction, and horizontal distribution bus to calves.
+                </p>
+                <div className="pt-2 text-xs font-bold text-emerald-700 flex items-center gap-1 group-hover:translate-x-1.5 transition-transform">
+                  <span>Launch Screenshot Pedigree Tree</span> &rarr;
+                </div>
+              </Link>
+
+              {/* Module 13: Family Tree Design 2 */}
+              <Link
+                href="/marketplace/page-13"
+                className="group p-6 rounded-3xl bg-white border-2 border-amber-300 shadow-md hover:shadow-xl transition-all space-y-3 ring-2 ring-amber-500/10"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300">
+                    MARKETPLACE-PAGE-13
+                  </span>
+                  <span className="text-xs font-mono font-bold text-amber-700">Tree Design #2</span>
+                </div>
+                <h4 className="font-extrabold text-base text-slate-900 group-hover:text-amber-600 transition-colors">
+                  13. 10-Year Horizontal Timeline Lineage
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Chronological horizontal swimlanes from Year 1 to Year 10. Tracing 2 starter animals through annual calving milestones &amp; asset valuation.
+                </p>
+                <div className="pt-2 text-xs font-bold text-amber-700 flex items-center gap-1 group-hover:translate-x-1.5 transition-transform">
+                  <span>Launch Timeline Tree</span> &rarr;
+                </div>
+              </Link>
+
+              {/* Module 14: Family Tree Design 3 */}
+              <Link
+                href="/marketplace/page-14"
+                className="group p-6 rounded-3xl bg-white border-2 border-indigo-300 shadow-md hover:shadow-xl transition-all space-y-3 ring-2 ring-indigo-500/10"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-900 border border-indigo-300">
+                    MARKETPLACE-PAGE-14
+                  </span>
+                  <span className="text-xs font-mono font-bold text-indigo-700">Tree Design #3</span>
+                </div>
+                <h4 className="font-extrabold text-base text-slate-900 group-hover:text-indigo-600 transition-colors">
+                  14. Radial Concentric Pedigree Sunburst
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Concentric circular orbits radiating from the 2 starter animals at the core outward to 4 generations of high-yielding descendants.
+                </p>
+                <div className="pt-2 text-xs font-bold text-indigo-700 flex items-center gap-1 group-hover:translate-x-1.5 transition-transform">
+                  <span>Launch Sunburst Wheel</span> &rarr;
+                </div>
+              </Link>
+
+              {/* Module 15: Family Tree Design 4 */}
+              <Link
+                href="/marketplace/page-15"
+                className="group p-6 rounded-3xl bg-white border-2 border-rose-300 shadow-md hover:shadow-xl transition-all space-y-3 ring-2 ring-rose-500/10"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-900 border border-rose-300">
+                    MARKETPLACE-PAGE-15
+                  </span>
+                  <span className="text-xs font-mono font-bold text-rose-700">Tree Design #4</span>
+                </div>
+                <h4 className="font-extrabold text-base text-slate-900 group-hover:text-rose-600 transition-colors">
+                  15. Dual-Pillar Lineage Branching Matrix
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Side-by-side synchronized comparison matrix of Mother Dam Engine A vs. Starter Calf Matriarch Engine B with yearly metrics.
+                </p>
+                <div className="pt-2 text-xs font-bold text-rose-700 flex items-center gap-1 group-hover:translate-x-1.5 transition-transform">
+                  <span>Launch Dual Matrix</span> &rarr;
+                </div>
+              </Link>
+
+              {/* Module 16: Family Tree Design 5 */}
+              <Link
+                href="/marketplace/page-16"
+                className="group p-6 rounded-3xl bg-white border-2 border-sky-300 shadow-md hover:shadow-xl transition-all space-y-3 ring-2 ring-sky-500/10"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-sky-100 text-sky-900 border border-sky-300">
+                    MARKETPLACE-PAGE-16
+                  </span>
+                  <span className="text-xs font-mono font-bold text-sky-700">Tree Design #5</span>
+                </div>
+                <h4 className="font-extrabold text-base text-slate-900 group-hover:text-sky-600 transition-colors">
+                  16. Isometric Glassmorphic Bovine Network
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                  Spatial glassmorphic node network featuring interactive age unit toggles (Years/Months/Days), RFID tags, and 95% sex-sorted semen batches.
+                </p>
+                <div className="pt-2 text-xs font-bold text-sky-700 flex items-center gap-1 group-hover:translate-x-1.5 transition-transform">
+                  <span>Launch Glassmorphic Network</span> &rarr;
+                </div>
+              </Link>
             </div>
           </div>
         )}
