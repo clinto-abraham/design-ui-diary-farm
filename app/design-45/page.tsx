@@ -180,8 +180,8 @@ export default function Design45Page() {
             <div className="p-5 rounded-2xl bg-amber-50/70 border border-amber-200">
               <span className="text-xs font-bold uppercase text-amber-800 block mb-1">Daily Pure Milk</span>
               <span className="text-3xl font-black text-amber-900">{activeData.dailyMilkProductionLiters} L/day</span>
-              <span className="text-xs text-amber-700 block mt-1">
-                {activeData.annualMilkProductionLiters.toLocaleString()} L / year harvest
+              <span suppressHydrationWarning className="text-xs text-amber-700 block mt-1">
+                {activeData.annualMilkProductionLiters.toLocaleString('en-IN')} L / year harvest
               </span>
             </div>
             <div className="p-5 rounded-2xl bg-rose-50/70 border border-rose-200">

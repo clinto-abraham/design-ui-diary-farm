@@ -144,8 +144,8 @@ export default function Design14Page() {
 
             <div className="p-4 rounded bg-[#061427] border border-slate-800">
               <span className="text-slate-400 block uppercase text-[10px]">ANNUAL PRODUCTION</span>
-              <span className="text-2xl font-bold text-emerald-400 block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L
+              <span suppressHydrationWarning className="text-2xl font-bold text-emerald-400 block mt-1">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L
               </span>
               <span className="text-slate-400 text-[11px] block mt-1">
                 {active.dailyMilkProductionLiters} Liters/day

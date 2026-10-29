@@ -134,8 +134,8 @@ export default function Design35Page() {
             <div className="p-4 rounded-2xl bg-[#0c1a12] border border-[#ea580c]/20">
               <span className="text-[#fed7aa] uppercase text-[10px] block">DAILY FAT-MILK SUPPLY</span>
               <span className="text-3xl font-black text-[#facc15] block mt-1">{active.dailyMilkProductionLiters} Liters</span>
-              <span className="text-[#fef3c7]/70 text-[11px] block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-[#fef3c7]/70 text-[11px] block mt-1">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 

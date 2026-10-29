@@ -120,7 +120,7 @@ export default function Design10Page() {
               <span className="text-[10px] text-slate-500 uppercase block">DAILY MILK YIELD</span>
               <div className="text-3xl font-extrabold text-cyan-400 mt-1">{current.dailyMilkProductionLiters}L</div>
               <div className="text-[10px] text-slate-400 mt-1">
-                {(current.annualMilkProductionLiters).toLocaleString()} L / YR
+                {(current.annualMilkProductionLiters).toLocaleString('en-IN')} L / YR
               </div>
             </div>
 

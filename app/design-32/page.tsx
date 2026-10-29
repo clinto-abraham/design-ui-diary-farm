@@ -130,8 +130,8 @@ export default function Design32Page() {
             <div className="p-4 rounded-2xl bg-[#050f1a] border border-[#ea580c]/20">
               <span className="text-[#fdba74] uppercase text-[10px] block">DAILY MILK YIELD</span>
               <span className="text-3xl font-serif text-[#ea580c] block mt-1">{active.dailyMilkProductionLiters} Liters</span>
-              <span className="text-[#ffedd5]/70 text-[11px] block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-[#ffedd5]/70 text-[11px] block mt-1">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 

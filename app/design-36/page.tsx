@@ -135,8 +135,8 @@ export default function Design36Page() {
             <div className="p-4 rounded-xl bg-[#090e18] border border-slate-800">
               <span className="text-slate-400 uppercase text-[10px] block">DAILY MILK YIELD</span>
               <span className="text-2xl font-bold text-cyan-300 block mt-1">{active.dailyMilkProductionLiters} Liters</span>
-              <span className="text-slate-400 text-[11px] block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-slate-400 text-[11px] block mt-1">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 

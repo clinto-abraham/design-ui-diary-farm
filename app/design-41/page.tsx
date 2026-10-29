@@ -214,7 +214,7 @@ export default function Design41Page() {
               </div>
               <div className="text-3xl font-black text-sky-900">{activeData.dailyMilkProductionLiters} Liters/day</div>
               <p className="text-xs text-sky-700 mt-1">
-                {activeData.annualMilkProductionLiters.toLocaleString()} L/year at peak
+                {activeData.annualMilkProductionLiters.toLocaleString('en-IN')} L/year at peak
               </p>
             </div>
 

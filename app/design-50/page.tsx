@@ -186,8 +186,8 @@ export default function Design50Page() {
             <div className="p-5 rounded-2xl bg-yellow-50 border-2 border-yellow-300">
               <span className="text-xs font-bold uppercase text-yellow-800 block mb-1">Daily Pure Milk</span>
               <span className="text-3xl font-black text-yellow-950">{activeData.dailyMilkProductionLiters} Liters</span>
-              <span className="text-xs text-yellow-700 block mt-1">
-                {(activeData.dailyMilkProductionLiters * 70).toLocaleString()} INR daily cashflow
+              <span suppressHydrationWarning className="text-xs text-yellow-700 block mt-1">
+                {(activeData.dailyMilkProductionLiters * 70).toLocaleString('en-IN')} INR daily cashflow
               </span>
             </div>
             <div className="p-5 rounded-2xl bg-orange-50 border-2 border-orange-300">

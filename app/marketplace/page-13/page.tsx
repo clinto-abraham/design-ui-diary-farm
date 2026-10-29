@@ -430,7 +430,7 @@ export default function MarketplacePage13() {
                 {currentMilestone.estimatedAssetValINR}
               </div>
               <div className="text-[11px] text-slate-500 font-medium">
-                {currentMilestone.annualMilkLiters.toLocaleString()} L/yr
+                {currentMilestone.annualMilkLiters.toLocaleString('en-IN')} L/yr
               </div>
             </div>
           </div>

@@ -130,8 +130,8 @@ export default function Design31Page() {
             <div className="p-4 rounded-2xl bg-[#f5ede0] border border-[#eeddc8]">
               <span className="text-[#8c6b4f] uppercase text-[10px] block">DAILY MILK RUN</span>
               <span className="text-3xl font-serif text-[#b45309] block mt-1">{active.dailyMilkProductionLiters} Liters</span>
-              <span className="text-[#8c6b4f] text-[11px] block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-[#8c6b4f] text-[11px] block mt-1">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 

@@ -191,7 +191,7 @@ export default function Design1Page() {
             <div className="p-5 border border-neutral-200 bg-neutral-50">
               <div className="text-xs font-mono text-neutral-500 uppercase">Annual Milk Production</div>
               <div className="text-3xl font-light text-neutral-950 mt-1">
-                {(activeData.annualMilkProductionLiters).toLocaleString()} <span className="text-xs font-mono text-neutral-400">Liters</span>
+                {(activeData.annualMilkProductionLiters).toLocaleString('en-IN')} <span suppressHydrationWarning className="text-xs font-mono text-neutral-400">Liters</span>
               </div>
               <div className="text-[11px] font-mono text-neutral-500 mt-2">
                 {activeData.dailyMilkProductionLiters} Liters/day @ ₹70/L
@@ -294,7 +294,7 @@ export default function Design1Page() {
                       <td className="p-3">{p.growingHeifers}</td>
                       <td className="p-3">+{p.calvesBornThisYear}</td>
                       <td className="p-3 font-bold">{p.totalHerdSize}</td>
-                      <td className="p-3">{p.annualMilkProductionLiters.toLocaleString()} L</td>
+                      <td suppressHydrationWarning className="p-3">{p.annualMilkProductionLiters.toLocaleString('en-IN')} L</td>
                       <td className="p-3 text-emerald-700 font-bold">{formatINR(p.grossMilkingRevenueINR)}</td>
                       <td className="p-3">{formatINR(p.herdAssetValueINR)}</td>
                       <td className="p-3">{formatINR(p.cumulativeNetProfitINR)}</td>

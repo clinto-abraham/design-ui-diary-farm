@@ -192,8 +192,8 @@ export default function Design5Page() {
             <span className="text-2xl font-bold text-emerald-400 mt-1 block">
               {formatINR(finalYear.grossMilkingRevenueINR)}
             </span>
-            <span className="text-[11px] text-slate-400 font-mono">
-              {(finalYear.annualMilkProductionLiters).toLocaleString()} Liters/yr
+            <span suppressHydrationWarning className="text-[11px] text-slate-400 font-mono">
+              {(finalYear.annualMilkProductionLiters).toLocaleString('en-IN')} Liters/yr
             </span>
           </div>
 
@@ -355,7 +355,7 @@ export default function Design5Page() {
                       <td className="p-3">{p.growingHeifers}</td>
                       <td className="p-3">+{p.calvesBornThisYear}</td>
                       <td className="p-3 font-bold text-white">{p.totalHerdSize}</td>
-                      <td className="p-3">{p.annualMilkProductionLiters.toLocaleString()} L</td>
+                      <td suppressHydrationWarning className="p-3">{p.annualMilkProductionLiters.toLocaleString('en-IN')} L</td>
                       <td className="p-3 text-emerald-400 font-bold">{formatINR(p.grossMilkingRevenueINR)}</td>
                       <td className="p-3 text-rose-400">{formatINR(p.feedAndCareCostINR)}</td>
                       <td className="p-3 text-cyan-300 font-bold">{formatINR(p.netMilkingProfitINR)}</td>

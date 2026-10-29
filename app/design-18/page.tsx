@@ -131,8 +131,8 @@ export default function Design18Page() {
             <div className="p-5 border border-[#e8e6e1] bg-white">
               <span className="text-[#787571] uppercase text-[10px] block">Daily Milk Yield</span>
               <span className="text-3xl font-serif text-[#1f1e1d] block mt-1">{active.dailyMilkProductionLiters} Liters</span>
-              <span className="text-[#787571] text-[11px] block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-[#787571] text-[11px] block mt-1">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 

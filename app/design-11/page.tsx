@@ -150,8 +150,8 @@ export default function Design11Page() {
             <div className="p-4 rounded-2xl bg-[#f8f7f4] border border-[#ded8cd]">
               <span className="text-[11px] text-[#78857a] uppercase block">Daily Milk Yield</span>
               <span className="text-3xl font-light text-[#263628] mt-1 block">{current.dailyMilkProductionLiters} Liters</span>
-              <span className="text-xs text-[#556357] mt-1 block">
-                {(current.annualMilkProductionLiters).toLocaleString()} L / year
+              <span suppressHydrationWarning className="text-xs text-[#556357] mt-1 block">
+                {(current.annualMilkProductionLiters).toLocaleString('en-IN')} L / year
               </span>
             </div>
 

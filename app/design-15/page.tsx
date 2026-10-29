@@ -158,8 +158,8 @@ export default function Design15Page() {
             <div className="p-4 rounded-2xl bg-[#f0fdf4] border border-[#dcfce7]">
               <span className="text-[#64846a] uppercase text-[10px] block">DAILY MILK RUN</span>
               <span className="text-3xl font-extrabold text-[#15803d] block mt-1">{active.dailyMilkProductionLiters} Liters</span>
-              <span className="text-[#64846a] text-[11px] mt-1 block">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-[#64846a] text-[11px] mt-1 block">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 

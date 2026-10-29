@@ -170,8 +170,8 @@ export default function Design4Page() {
             <div className="p-4 rounded-xl bg-black/30 border border-emerald-500/20">
               <span className="text-[10px] font-mono text-slate-400 uppercase">Daily Milk Output</span>
               <div className="text-3xl font-extrabold text-teal-300 mt-1">{data.dailyMilkProductionLiters}L</div>
-              <span className="text-[10px] font-mono text-slate-400">
-                {(data.annualMilkProductionLiters).toLocaleString()} L / year
+              <span suppressHydrationWarning className="text-[10px] font-mono text-slate-400">
+                {(data.annualMilkProductionLiters).toLocaleString('en-IN')} L / year
               </span>
             </div>
 

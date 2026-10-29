@@ -131,8 +131,8 @@ export default function Design24Page() {
             <div className="p-4 rounded-2xl bg-[#fff7ed] border border-[#fed7aa]">
               <span className="text-[#9a3412] uppercase text-[10px] font-bold block">DAILY MILK RUN</span>
               <span className="text-3xl font-serif font-bold text-[#ea580c] block mt-1">{active.dailyMilkProductionLiters} Liters</span>
-              <span className="text-[#78350f] text-[11px] block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-[#78350f] text-[11px] block mt-1">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 

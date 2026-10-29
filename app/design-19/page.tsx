@@ -138,8 +138,8 @@ export default function Design19Page() {
             <div className="p-4 bg-[#051327] border border-cyan-500/30 rounded">
               <span className="text-cyan-500 block uppercase text-[10px]">DAILY FLOW RATE</span>
               <span className="text-2xl font-bold text-cyan-300 block mt-1">{active.dailyMilkProductionLiters} L / day</span>
-              <span className="text-cyan-500 text-[11px] block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-cyan-500 text-[11px] block mt-1">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 

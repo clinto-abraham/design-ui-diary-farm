@@ -134,8 +134,8 @@ export default function Design20Page() {
             <div className="p-5 rounded-2xl bg-[#e8edf2] shadow-[inset_4px_4px_8px_#c8d0da,inset_-4px_-4px_8px_#ffffff]">
               <span className="text-[#718096] uppercase text-[10px] block">DAILY MILK YIELD</span>
               <span className="text-3xl font-extrabold text-emerald-600 block mt-1">{active.dailyMilkProductionLiters} L / day</span>
-              <span className="text-[#718096] text-[11px] block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-[#718096] text-[11px] block mt-1">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 

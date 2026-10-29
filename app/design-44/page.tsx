@@ -181,8 +181,8 @@ export default function Design44Page() {
             <div className="p-5 rounded-2xl bg-lime-50 border border-lime-200">
               <span className="text-xs font-bold uppercase text-lime-800 block mb-1">Daily Clover Milk</span>
               <span className="text-3xl font-black text-lime-950">{activeData.dailyMilkProductionLiters} L/day</span>
-              <span className="text-xs text-lime-700 block mt-1">
-                {(activeData.dailyMilkProductionLiters * 70).toLocaleString()} INR daily turnover
+              <span suppressHydrationWarning className="text-xs text-lime-700 block mt-1">
+                {(activeData.dailyMilkProductionLiters * 70).toLocaleString('en-IN')} INR daily turnover
               </span>
             </div>
             <div className="p-5 rounded-2xl bg-yellow-50 border border-yellow-200">

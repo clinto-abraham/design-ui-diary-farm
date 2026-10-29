@@ -132,8 +132,8 @@ export default function Design28Page() {
             <div className="p-4 rounded-2xl bg-[#0b0a1c] border border-[#fbbf24]/20">
               <span className="text-[#fde68a] uppercase text-[10px] block">DAILY MILK RUN</span>
               <span className="text-3xl font-serif text-[#fbbf24] block mt-1">{active.dailyMilkProductionLiters} Liters</span>
-              <span className="text-[#fef3c7]/70 text-[11px] block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-[#fef3c7]/70 text-[11px] block mt-1">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 

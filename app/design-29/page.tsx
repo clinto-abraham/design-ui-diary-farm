@@ -132,8 +132,8 @@ export default function Design29Page() {
             <div className="p-4 rounded-2xl bg-[#170903] border border-[#ea580c]/20">
               <span className="text-[#fdba74] uppercase text-[10px] font-bold block">DAILY MILK SUPPLY</span>
               <span className="text-3xl font-black text-[#fb923c] block mt-1">{active.dailyMilkProductionLiters} Liters</span>
-              <span className="text-[#fed7aa]/70 text-[11px] block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-[#fed7aa]/70 text-[11px] block mt-1">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 

@@ -130,8 +130,8 @@ export default function Design22Page() {
             <div className="p-4 rounded-2xl bg-[#1c0707] border border-[#facc15]/20">
               <span className="text-[#fde68a] uppercase text-[10px] block">DAILY MILK NECTAR</span>
               <span className="text-3xl font-serif text-[#facc15] block mt-1">{active.dailyMilkProductionLiters} Liters</span>
-              <span className="text-[#fef3c7]/70 text-[11px] block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-[#fef3c7]/70 text-[11px] block mt-1">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 

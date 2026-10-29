@@ -166,8 +166,8 @@ export function calculate10YearProjection(
 }
 
 export function formatNumber(amount: number): string {
-  // Pure deterministic string formatting (en-US comma grouping) to ensure 100% hydration match across all locales
-  return Math.round(amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  if (typeof amount !== "number" || isNaN(amount)) return "0";
+  return Math.round(amount).toLocaleString("en-IN");
 }
 
 export function formatINR(amount: number): string {

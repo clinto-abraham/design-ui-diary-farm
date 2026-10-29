@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { DesignSwitcher } from "@/components/DesignSwitcher";
-import { calculate10YearProjection, formatINR, DEFAULT_CONFIG } from "@/lib/dairy-compounding";
+import { calculate10YearProjection, formatINR, formatNumber, DEFAULT_CONFIG } from "@/lib/dairy-compounding";
 import {
   Zap,
   Clock,
@@ -134,8 +134,8 @@ export default function Design40Page() {
             <div className="p-4 rounded-2xl bg-[#0f0422] border border-purple-500/20">
               <span className="text-yellow-400 uppercase text-[10px] block">DAILY DOORSTEP LITERS</span>
               <span className="text-3xl font-black text-yellow-300 block mt-1">{active.dailyMilkProductionLiters} Liters</span>
-              <span className="text-purple-300 text-[11px] block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span className="text-purple-300 text-[11px] block mt-1" suppressHydrationWarning>
+                {formatNumber(active.annualMilkProductionLiters)} L / yr
               </span>
             </div>
 

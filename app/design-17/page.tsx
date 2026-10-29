@@ -146,8 +146,8 @@ export default function Design17Page() {
             <div className="p-4 rounded-xl bg-[#0f0422] border border-purple-500/30">
               <span className="text-purple-400 uppercase text-[10px] block">DAILY MILK YIELD</span>
               <span className="text-2xl font-black text-yellow-300 block mt-1">{current.dailyMilkProductionLiters} Liters</span>
-              <span className="text-purple-400 text-[11px] block mt-1">
-                {(current.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-purple-400 text-[11px] block mt-1">
+                {(current.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 

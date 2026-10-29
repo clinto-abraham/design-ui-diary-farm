@@ -135,8 +135,8 @@ export default function Design25Page() {
             <div className="p-4 rounded-xl bg-[#0c091a] border border-violet-500/20">
               <span className="text-slate-400 uppercase text-[10px] block">DAILY MILK VOLUME</span>
               <span className="text-2xl font-bold text-cyan-400 block mt-1">{active.dailyMilkProductionLiters} Liters</span>
-              <span className="text-slate-400 text-[11px] block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-slate-400 text-[11px] block mt-1">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 

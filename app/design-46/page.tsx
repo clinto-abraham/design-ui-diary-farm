@@ -181,8 +181,8 @@ export default function Design46Page() {
             <div className="p-5 rounded-2xl bg-emerald-50/70 border border-emerald-200">
               <span className="text-xs font-bold uppercase text-emerald-800 block mb-1">Daily Canal Milk</span>
               <span className="text-3xl font-black text-emerald-950">{activeData.dailyMilkProductionLiters} Liters</span>
-              <span className="text-xs text-emerald-700 block mt-1">
-                {(activeData.dailyMilkProductionLiters * 70).toLocaleString()} INR daily cashflow
+              <span suppressHydrationWarning className="text-xs text-emerald-700 block mt-1">
+                {(activeData.dailyMilkProductionLiters * 70).toLocaleString('en-IN')} INR daily cashflow
               </span>
             </div>
             <div className="p-5 rounded-2xl bg-sky-50/70 border border-sky-200">

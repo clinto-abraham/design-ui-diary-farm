@@ -316,7 +316,7 @@ export default function MarketplacePage15() {
                 <div>
                   <span className="text-slate-400">Cumul. Milk Yield: </span>
                   <strong className="text-emerald-700 font-bold">
-                    {row.cumulativeMilkLiters.toLocaleString()} L
+                    {row.cumulativeMilkLiters.toLocaleString('en-IN')} L
                   </strong>
                 </div>
                 <div className="h-4 w-[1px] bg-slate-200"></div>

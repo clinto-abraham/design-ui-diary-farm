@@ -26,10 +26,10 @@ export const ADMIN_PAGES = [
   },
   {
     id: "page-2",
-    name: "02. Animal Herd Registry & RFID Ear-Tag Master",
-    tagline: "10-Year Compounding Tree, Sire Lineage & Lactation Metrics",
-    badge: "Herd Master",
-    color: "from-emerald-500 to-teal-600",
+    name: "02. List All Animals Packages (Livestock Management)",
+    tagline: "Complete Catalog of Configured Animal Packages, Ear Tag Series & Live Marketplace Sync",
+    badge: "Packages Catalog",
+    color: "from-cyan-500 to-blue-600",
   },
   {
     id: "page-3",

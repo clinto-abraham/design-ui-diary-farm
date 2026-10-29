@@ -133,8 +133,8 @@ export default function Design38Page() {
             <div className="p-4 rounded-xl bg-[#061e18] border border-emerald-500/20">
               <span className="text-emerald-400 uppercase text-[10px] block">DAILY MILK SUPPLY</span>
               <span className="text-2xl font-bold text-amber-300 block mt-1">{active.dailyMilkProductionLiters} Liters</span>
-              <span className="text-slate-400 text-[11px] block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-slate-400 text-[11px] block mt-1">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 

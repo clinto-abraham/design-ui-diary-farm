@@ -180,8 +180,8 @@ export default function Design47Page() {
             <div className="p-5 rounded-2xl bg-sky-50 border border-sky-200">
               <span className="text-xs font-bold uppercase text-sky-800 block mb-1">Daily Pure Milk</span>
               <span className="text-3xl font-black text-sky-900">{activeData.dailyMilkProductionLiters} L/day</span>
-              <span className="text-xs text-sky-700 block mt-1">
-                {(activeData.dailyMilkProductionLiters * 70).toLocaleString()} INR daily turnover
+              <span suppressHydrationWarning className="text-xs text-sky-700 block mt-1">
+                {(activeData.dailyMilkProductionLiters * 70).toLocaleString('en-IN')} INR daily turnover
               </span>
             </div>
             <div className="p-5 rounded-2xl bg-emerald-50 border border-emerald-200">

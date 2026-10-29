@@ -134,8 +134,8 @@ export default function Design26Page() {
             <div className="p-4 rounded-xl bg-[#061411] border border-[#d4af37]/20">
               <span className="text-[#d4af37] uppercase text-[10px] block">DAILY MILK RUN</span>
               <span className="text-2xl font-bold text-emerald-300 block mt-1">{active.dailyMilkProductionLiters} Liters</span>
-              <span className="text-slate-400 text-[11px] block mt-1">
-                {(active.annualMilkProductionLiters).toLocaleString()} L / yr
+              <span suppressHydrationWarning className="text-slate-400 text-[11px] block mt-1">
+                {(active.annualMilkProductionLiters).toLocaleString('en-IN')} L / yr
               </span>
             </div>
 
